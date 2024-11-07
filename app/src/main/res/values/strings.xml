@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Sprint2_mobile</string>
+    <string name="custo_hint">CUSTO</string>
+    <string name="tipo_hint">TIPO\n</string>
+    <string name="descricao_hint">DESCRIÇÃO</string>
+    <string name="cadastro_de_tratamento">CADASTRO DE TRATAMENTO</string>
+    <string name="odontoprev">Odontoprev</string>
+    <string name="registrar">REGISTRAR</string>
+</resources>
