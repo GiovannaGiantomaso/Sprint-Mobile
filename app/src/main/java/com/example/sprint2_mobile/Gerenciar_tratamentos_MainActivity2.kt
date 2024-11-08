@@ -1,15 +1,15 @@
-package com.example.sprint2_mobile;
-
-import android.app.Activity
-import android.content.Intent
-
+package com.example.sprint2_mobile
 
 import android.os.Bundle
-import android.widget.ImageButton
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.sprint2_mobile.Tratamento
+import com.example.sprint2_mobile.services.RetrofitInstance
+import com.example.sprint2_mobile.services.Tratamento
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class Gerenciar_tratamentos_MainActivity2 : AppCompatActivity() {
 
@@ -18,24 +18,20 @@ class Gerenciar_tratamentos_MainActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_gerenciar_tratamentos_main2)
 
         val recyclerView: RecyclerView = findViewById(R.id.recyclerViewTratamentos)
-
-        // Exemplo de lista de tratamentos
-        val tratamentos = listOf(
-            Tratamento(1, "Tratamento emergencial", "Emergencial", 300.00),
-            Tratamento(2, "Tratamento preventivo", "Preventivo", 150.00),
-            Tratamento(3, "Tratamento estético", "Estética", 500.00),
-            Tratamento(4, "Tratamento periodontal", "Periodontal", 290.00),
-            // Adicione mais tratamentos conforme necessário
-        )
-
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = TratamentoAdapter(tratamentos)
-        // Configura o botão de voltar para tratamento_activity_main2
-        val backButton = findViewById<ImageButton>(R.id.Button_back_TRATA)
-        backButton.setOnClickListener {
-            val intent = Intent(this, TratamentoActivityMain2::class.java)
-            startActivity(intent)
-            finish() // Encerra a Activity atual para que o usuário não volte para ela
-        }
+
+        // Chamar a API para obter a lista de tratamentos
+        RetrofitInstance.api.getTratamentos().enqueue(object : Callback<List<Tratamento>> {
+            override fun onResponse(call: Call<List<Tratamento>>, response: Response<List<Tratamento>>) {
+                if (response.isSuccessful) {
+                    val tratamentos = response.body() ?: emptyList()
+                    recyclerView.adapter = TratamentoAdapter(tratamentos)
+                }
+            }
+
+            override fun onFailure(call: Call<List<Tratamento>>, t: Throwable) {
+                Log.e("API_ERROR", "Erro ao carregar tratamentos", t)
+            }
+        })
     }
 }

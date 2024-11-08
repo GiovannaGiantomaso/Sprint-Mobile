@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sprint2_mobile.services.Tratamento
 
 class TratamentoAdapter(private val tratamentos: List<Tratamento>) :
     RecyclerView.Adapter<TratamentoAdapter.TratamentoViewHolder>() {
