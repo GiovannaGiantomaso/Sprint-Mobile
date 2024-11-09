@@ -10,7 +10,7 @@ import com.example.sprint2_mobile.services.Paciente
 
 class PacienteAdapter(private val pacientesList: List<Paciente>) : RecyclerView.Adapter<PacienteAdapter.PacienteViewHolder>() {
 
-    // ViewHolder para armazenar os elementos do layout
+
     class PacienteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nomeTextView: TextView = itemView.findViewById(R.id.textViewNome)
         val emailTextView: TextView = itemView.findViewById(R.id.textViewEmail)
@@ -33,7 +33,6 @@ class PacienteAdapter(private val pacientesList: List<Paciente>) : RecyclerView.
     override fun onBindViewHolder(holder: PacienteViewHolder, position: Int) {
         val paciente = pacientesList[position]
 
-        // Preenchendo os dados do paciente nos campos correspondentes
         holder.nomeTextView.text = paciente.nome
         holder.emailTextView.text = paciente.email
         holder.telefoneTextView.text = paciente.telefone

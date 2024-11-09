@@ -56,10 +56,5 @@ class ListarPacienteActivity : AppCompatActivity() {
                 // Tratar erro se necessário
             }
         })
-        // Configura o botão de voltar para a tela anterior
-        val backButton = findViewById<ImageButton>(R.id.Button_back_TRATA)
-        backButton.setOnClickListener {
-            finish() // Encerra a Activity atual para voltar à anterior
-        }
     }
 }

@@ -7,11 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".Gerenciar_tratamentos_MainActivity2">
 
-    <!-- Logotipo e título -->
-
-    <!-- RecyclerView para a lista de tratamentos -->
-
-    <!-- Barra inferior -->
 
     <ImageView
         android:id="@+id/imageView19"
@@ -61,7 +56,6 @@
         app:layout_constraintTop_toBottomOf="@+id/recyclerViewTratamentos"
         app:srcCompat="@drawable/barra" />
 
-    <!-- Botão de voltar -->
     <ImageButton
         android:id="@+id/Button_back_TRATA"
         android:layout_width="48dp"

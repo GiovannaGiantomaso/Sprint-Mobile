@@ -7,8 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".services.Tratamento">
 
-    <!-- Coloque imageView24 primeiro para que fique no fundo -->
-
     <ImageView
         android:id="@+id/imageView24"
         android:layout_width="405dp"

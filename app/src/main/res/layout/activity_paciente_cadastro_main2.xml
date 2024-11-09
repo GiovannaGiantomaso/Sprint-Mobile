@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".Paciente_MainActivity2">
 
-    <!-- Botão de voltar -->
     <ImageButton
         android:id="@+id/Button_back_TRATA"
         android:layout_width="48dp"
@@ -20,7 +19,6 @@
         app:layout_constraintVertical_bias="0.05"
         android:layout_margin="8dp"/>
 
-    <!-- Logo e título -->
     <ImageView
         android:id="@+id/imageView19"
         android:layout_width="64dp"
@@ -43,7 +41,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Campos do formulário -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -156,7 +153,6 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Botão de salvar -->
     <Button
         android:id="@+id/buttonSalvar"
         android:layout_width="wrap_content"

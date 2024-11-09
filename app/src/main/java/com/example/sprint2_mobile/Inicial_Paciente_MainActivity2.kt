@@ -39,5 +39,6 @@ class Inicial_Paciente_MainActivity2 : AppCompatActivity() {
             startActivity(intent)
         }
 
+
     }
 }
