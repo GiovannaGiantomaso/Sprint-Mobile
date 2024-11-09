@@ -5,35 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".services.Tratamento">
-
-    <!-- Coloque imageView24 primeiro para que fique no fundo -->
-
-    <ImageView
-        android:id="@+id/imageView24"
-        android:layout_width="405dp"
-        android:layout_height="407dp"
-        android:src="@drawable/_78032_p6012l_795"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="697dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/barra" />
+    tools:context=".Inicial_Paciente_MainActivity2">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -48,6 +20,21 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/barra" />
+
+    <ImageButton
+        android:id="@+id/Button_back_TRATA"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="4dp"
+        android:contentDescription="Voltar"
+        android:src="@drawable/baseline_arrow_back_ios_new_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView19"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView19"
@@ -75,45 +62,55 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.094" />
 
-    <Button
-        android:id="@+id/button_cadastrar_trata"
-        android:layout_width="248dp"
-        android:layout_height="49dp"
-        android:backgroundTint="#1976D2"
-        android:text="CADASTRAR TRATAMENTOS"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="697dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.241"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.364" />
-
-    <Button
-        android:id="@+id/button_gerenciar_trata"
-        android:layout_width="253dp"
-        android:layout_height="49dp"
-        android:backgroundTint="#1976D2"
-        android:text="GERENCIAR TRATAMENTOS"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.248"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.449" />
-
-    <ImageButton
-        android:id="@+id/Button_back_TRATA"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="71dp"
-        android:layout_marginEnd="4dp"
-        android:src="@drawable/baseline_arrow_back_ios_new_24"
-        android:contentDescription="Voltar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView19"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/barra" />
 
+    <Button
+        android:id="@+id/button_cadas_paci"
+        android:layout_width="276dp"
+        android:layout_height="64dp"
+        android:backgroundTint="#1976D2"
+        android:text="CADASTRAR PACIENTE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.311"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.363" />
+
+    <Button
+        android:id="@+id/button_geren_paci"
+        android:layout_width="282dp"
+        android:layout_height="62dp"
+        android:backgroundTint="#1976D2"
+        android:text="GERENCIAR PACIENTES"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.502" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="191dp"
+        android:layout_height="219dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974"
+        app:srcCompat="@drawable/paciente" />
 </androidx.constraintlayout.widget.ConstraintLayout>

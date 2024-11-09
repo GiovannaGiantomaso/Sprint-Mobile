@@ -1,6 +1,7 @@
 plugins {
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services") // Plugin do Google Services
 }
 
 android {
@@ -30,7 +31,6 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildToolsVersion = "34.0.0"
 }
 
 dependencies {
@@ -43,6 +43,14 @@ dependencies {
     // Retrofit and Gson dependencies
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // Firebase dependencies
+    implementation(platform("com.google.firebase:firebase-bom:33.5.1")) // Adiciona o BOM para gerenciar as versões do Firebase
+    implementation("com.google.firebase:firebase-database-ktx")
+    implementation("com.google.firebase:firebase-auth-ktx")
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-database-ktx:20.0.3")
+    implementation("com.google.firebase:firebase-analytics-ktx:20.0.3")
 
     // Test dependencies
     testImplementation(libs.junit)
